@@ -23,7 +23,7 @@ public interface IProductService {
 
     List<Product> getProductsByCategory(String category);
 
-    List<Product> getProductsByBrandAndName(String brand, String name);;;;;;;;;;
+    List<Product> getProductsByBrandAndName(String brand, String name);
 
     List<Product> getProductsByBrand(String brand);
 

@@ -6,7 +6,6 @@ import com.example.Fashionecomerce.model.*;
 import com.example.Fashionecomerce.repository.*;
 import com.example.Fashionecomerce.request.AddProductRequest;
 import com.example.Fashionecomerce.request.ProductUpdateRequest;
-import com.example.Fashionecomerce.service.image.IImageService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -114,7 +113,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public List<Product> getProductsByCategoryAndBrand(String category, String brand) {
-        return productRepository.findByCategoryAndBrand(category,brand);
+        return productRepository.findByCategoryNameAndBrand(category,brand);
     }
 
     @Override
@@ -124,7 +123,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public List<Product> getProductsByBrandAndName(String brand, String name) {
-        return productRepository.findByNameAndBrand(brand,name);
+        return productRepository.findByBrandAndName(brand,name);
     }
 
     @Override

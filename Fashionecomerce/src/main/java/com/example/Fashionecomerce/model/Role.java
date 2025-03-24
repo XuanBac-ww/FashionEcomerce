@@ -18,12 +18,12 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Name;
+    private String name;
 
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users = new HashSet<>();
 
-    private Role(String name) {
-        this.Name = name;
+    public Role(String name) {
+        this.name = name;
     }
 }
